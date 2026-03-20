@@ -1,0 +1,105 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* HEADER */
+header {
+    background: #1f4e6b;
+    color: white;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #333;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem;
+}
+
+nav a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* MAIN */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+   
+}
+
+/* CARDS GRID */
+main div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* CARD STYLE */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.card h2 {
+    background: #1f4e6b;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+      text-align: center;
+}
+
+/* ABOUT SECTION */
+.about {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.about img {
+    width: 120px;
+    border-radius: 5px;
+}
+
+/* LOCATION */
+.location {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.location img {
+    width: 100px;
+}
+
+/* FOOTER */
+footer {
+    background: #1f4e6b;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

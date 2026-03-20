@@ -1,0 +1,90 @@
+:root {
+    --red: #d21034;
+    --green: #007e3a;
+    --light: #f4f4f4;
+    --dark: #333;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #cfded1;
+}
+
+/* HEADER */
+header {
+    background: var(--red);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.9);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
+
+.card h2 {
+    background: var(--green);
+    color: white;
+    padding: 0.5rem;
+    margin-top: 0;
+}
+
+/* WEATHER ICON (mobile uses SVG) */
+.weather-icon {
+    width: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* FOOTER */
+footer {
+    background: var(--red);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ========================= */
+/* DESKTOP VIEW */
+/* ========================= */
+@media (min-width: 768px) {
+
+    .card {
+        position: absolute;
+        width: 250px;
+    }
+
+    .data {
+        top: 20%;
+        left: 5%;
+    }
+
+    .weather {
+        top: 25%;
+        right: 5%;
+    }
+
+    /* Add emoji via pseudo-element */
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+    .weather-icon {
+        display: none; /* hide SVG in large view */
+    }
+}

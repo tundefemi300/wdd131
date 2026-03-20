@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals by Oluwafemi Akanbi. Website about Malta, including data and weather information.">
+    <meta name="author" content="Oluwafemi Akanbi">
+    <title>Malta</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+
+    <!-- JS -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Malta</h1>
+    </header>
+
+    <!-- HERO IMAGE -->
+    <section class="hero">
+        <picture>
+            <source srcset="images/malta-large.webp" media="(min-width: 768px)">
+            <img src="images/malta-small.webp" alt="Malta Lemurs">
+        </picture>
+
+        <!-- DATA CARD -->
+        <div class="card data">
+            <h2>Data</h2>
+            <p><strong>Area:</strong> 587,041 sq km</p>
+            <p><strong>Population:</strong> 27,691,018</p>
+            <p><strong>Capital:</strong> Antananarivo</p>
+            <p><strong>Languages:</strong> Malagasy, French</p>
+            <p><strong>Currency:</strong> Malagasy Ariary</p>
+            <p><strong>Time Zone:</strong> UTC+3</p>
+            <p><strong>Calling Code:</strong> +261</p>
+            <p><strong>Internet TLD:</strong> .mg</p>
+        </div>
+
+        <!-- WEATHER CARD -->
+        <div class="card weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+
+            <p><strong>Temperature:</strong> <span id="temp">10</span> °C</p>
+            <p><strong>Conditions:</strong> Partly Cloudy</p>
+            <p><strong>Wind:</strong> <span id="wind">5</span> km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windChill"></span></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="year"></span> 🌸 Rubia Magdalena Francesco 🌸 Malta</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

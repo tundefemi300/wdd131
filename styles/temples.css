@@ -31,6 +31,9 @@ nav ul {
     display: none; /* Hidden for mobile by default */
     flex-direction: column;
 }
+.nav-links.open {
+    display: flex;
+}
 
 nav ul li {
     margin: 0.5rem 0;

@@ -51,6 +51,18 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: #0066cc;
 }
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  color: gold;
+}
 
 footer {
     text-align: center;

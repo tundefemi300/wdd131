@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
-
+<meta name="description" content="Submit a product review including rating, features, and feedback.">
+<meta name="author" content="Oluwafemi Akanbi">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
@@ -24,29 +30,47 @@
         </select>
 
         <!-- Rating -->
-        <fieldset>
-            <legend>Overall Rating</legend>
+     <fieldset>
+  <legend>Overall Rating</legend>
 
-            <label><input type="radio" name="rating" value="1" required> ☆</label>
-            <label><input type="radio" name="rating" value="2"> ☆☆</label>
-            <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-            <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-            <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
-        </fieldset>
+  <input type="radio" id="rate1" name="rating" value="1" required>
+  <label for="rate1">☆</label>
+
+  <input type="radio" id="rate2" name="rating" value="2">
+  <label for="rate2">☆☆</label>
+
+  <input type="radio" id="rate3" name="rating" value="3">
+  <label for="rate3">☆☆☆</label>
+
+  <input type="radio" id="rate4" name="rating" value="4">
+  <label for="rate4">☆☆☆☆</label>
+
+  <input type="radio" id="rate5" name="rating" value="5">
+  <label for="rate5">☆☆☆☆☆</label>
+
+</fieldset>
 
         <!-- Date -->
         <label for="date">Date of Installation</label>
         <input type="date" id="date" name="date" required>
 
         <!-- Features -->
-        <fieldset>
-            <legend>Useful Features</legend>
+     <fieldset>
+  <legend>Useful Features</legend>
 
-            <label><input type="checkbox" name="features" value="Durable"> Durable</label>
-            <label><input type="checkbox" name="features" value="Easy to Use"> Easy to Use</label>
-            <label><input type="checkbox" name="features" value="Affordable"> Affordable</label>
-            <label><input type="checkbox" name="features" value="High Performance"> High Performance</label>
-        </fieldset>
+  <input type="checkbox" id="durable" name="features" value="Durable">
+  <label for="durable">Durable</label>
+
+  <input type="checkbox" id="easy" name="features" value="Easy to Use">
+  <label for="easy">Easy to Use</label>
+
+  <input type="checkbox" id="affordable" name="features" value="Affordable">
+  <label for="affordable">Affordable</label>
+
+  <input type="checkbox" id="performance" name="features" value="High Performance">
+  <label for="performance">High Performance</label>
+
+</fieldset>
 
         <!-- Review -->
         <label for="review">Written Review</label>

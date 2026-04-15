@@ -1,0 +1,178 @@
+<!-- ================= INDEX.HTML ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evibank - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+<header>
+  <h1>Evibank</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Welcome to Evibank</h2>
+    <p>Your trusted digital banking partner.</p>
+    <button id="learnBtn">View Services</button>
+  </section>
+
+  <section id="dynamicContent" class="cards"></section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Evibank</p>
+  <a href="references.html">References</a>
+</footer>
+</body>
+</html>
+
+<!-- ================= SERVICES.HTML ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evibank - Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <h1>Evibank</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Savings Account</div>
+    <div class="card">Loans</div>
+    <div class="card">Mobile Banking</div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Evibank</p>
+  <a href="references.html">References</a>
+</footer>
+</body>
+</html>
+
+<!-- ================= CONTACT.HTML ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evibank - Contact</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+<header>
+  <h1>Evibank</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Name" required />
+    <input type="email" placeholder="Email" required />
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2026 Evibank</p>
+  <a href="references.html">References</a>
+</footer>
+</body>
+</html>
+
+<!-- ================= REFERENCES.HTML ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>References</title>
+</head>
+<body>
+<h2>References</h2>
+<p>Images from Unsplash</p>
+<p>Content created by student</p>
+</body>
+</html>
+
+<!-- ================= CSS ================= -->
+/* css/style.css */
+body { font-family: Arial; margin: 0; }
+header { background:#004080; color:white; padding:1rem; }
+nav a { color:white; margin:10px; text-decoration:none; }
+.hero { text-align:center; padding:50px; }
+.cards { display:flex; gap:20px; flex-wrap:wrap; }
+.card { background:#eee; padding:20px; border-radius:10px; }
+form { display:flex; flex-direction:column; gap:10px; max-width:400px; }
+button { background:#004080; color:white; padding:10px; border:none; }
+
+@media(max-width:768px){ .cards{flex-direction:column;} }
+
+<!-- ================= JAVASCRIPT ================= -->
+// js/script.js
+const services = [
+  {name:"Savings", rate:"5%"},
+  {name:"Loans", rate:"10%"},
+  {name:"Investments", rate:"12%"}
+];
+
+function displayServices(){
+  const container = document.getElementById("dynamicContent");
+  if(!container) return;
+
+  container.innerHTML = services.map(s => `
+    <div class="card">
+      <h3>${s.name}</h3>
+      <p>Rate: ${s.rate}</p>
+    </div>
+  `).join("");
+}
+
+function greetUser(){
+  const hour = new Date().getHours();
+  return hour < 12 ? "Good morning" : "Good afternoon";
+}
+
+const btn = document.getElementById("learnBtn");
+if(btn){
+  btn.addEventListener("click", () => {
+    displayServices();
+    alert(`${greetUser()}! Welcome to Evibank`);
+  });
+}
+
+// FORM HANDLING
+const form = document.getElementById("contactForm");
+if(form){
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    localStorage.setItem("formSubmitted","true");
+    alert("Message sent successfully!");
+  });
+}

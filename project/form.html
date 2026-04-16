@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temple Review</title>
+
+    <meta name="description"
+        content="Submit your temple review including ratings and comments using this responsive form.">
+    <meta name="author" content="Tunde Femi">
+
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Submit Review</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="form.html">Review</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="reviewForm">
+
+            <label for="templeName">Temple Name</label>
+            <input type="text" id="templeName" name="templeName" required>
+
+            <fieldset>
+                <legend>Rating</legend>
+
+                <input type="radio" id="rate1" name="rating" value="1" required>
+                <label for="rate1">1</label>
+
+                <input type="radio" id="rate2" name="rating" value="2">
+                <label for="rate2">2</label>
+
+                <input type="radio" id="rate3" name="rating" value="3">
+                <label for="rate3">3</label>
+
+                <input type="radio" id="rate4" name="rating" value="4">
+                <label for="rate4">4</label>
+
+                <input type="radio" id="rate5" name="rating" value="5">
+                <label for="rate5">5</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Useful Features</legend>
+
+                <input type="checkbox" id="durable" name="features" value="Durable">
+                <label for="durable">Durable</label>
+
+                <input type="checkbox" id="easy" name="features" value="Easy to Use">
+                <label for="easy">Easy to Use</label>
+
+                <input type="checkbox" id="affordable" name="features" value="Affordable">
+                <label for="affordable">Affordable</label>
+
+                <input type="checkbox" id="performance" name="features" value="High Performance">
+                <label for="performance">High Performance</label>
+
+            </fieldset>
+
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <p>Total Reviews: <span id="reviewCount"></span></p>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+
+</body>
+
+</html>
